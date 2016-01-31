@@ -4,7 +4,11 @@ use v6;
 # see https://github.com/zoffixznet/perl6-String-Quotemeta/blob/master/lib/String/Quotemeta.pm6
 module Foo {
     our sub touch-topic() {
-        my $v = CALLERS::<$_>;
+        my $v = $CALLER::_;
+        # all works
+        # my $v = $CALLERS::_;
+        # my $v = CALLER::<$_>;
+        # my $v = CALLERS::<$_>;
         say "touch $v";
     }
 }
