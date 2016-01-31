@@ -1,5 +1,5 @@
 use v6;
-unit class ExportEx;
+unit module ExportEx;
 
 our sub our-func() {
     say "our func";
